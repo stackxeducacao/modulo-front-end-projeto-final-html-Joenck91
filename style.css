@@ -21,6 +21,7 @@ body{
     font-family: "Volkhov", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1em;
 }
 header{
     display: flex;
@@ -35,7 +36,7 @@ nav{
     width: 50%;
 }
 section{
-    max-width: 95%;
+    width: 95%;
     padding-bottom: 25px;
 }
 hr{
@@ -101,7 +102,7 @@ nav{
     padding: 20px 0;
 }
 .divHeads a{
-    font-size: 22px;
+    font-size: 18px;
 }
 
 /*Proximos 3 elementos são padrões para a criação de mais projetos*/
@@ -149,7 +150,7 @@ nav{
     margin-top: 30px;
 }
 
-/*Pórimos 3 elementos são padrões para projetos em andamento*/
+/*PóXimos 3 elementos são padrões para projetos em andamento*/
 .projetodownload{
     display: flex;
     flex-direction: column;
@@ -202,7 +203,7 @@ textarea{
     border-bottom: 10px;
     background:none;
     width: 100%;
-    min-height: 50px;
+    min-height: 50px;;
     margin: 3px 0;
 }
 #enviar{
@@ -237,6 +238,13 @@ footer nav{
         width: 98%;
         justify-content: space-around;
         text-align: left;
+        font-size: 12px;
+    }
+    header, section{
+        max-width: 750px;
+    }
+    .fa-brands{
+        font-size: 20px;
     }
     nav{
         width: 20%;
@@ -314,5 +322,18 @@ footer nav{
         border-left: solid 2px green;
         border-bottom-left-radius: 10% ;
         margin-top: 0;
+    }
+    input{
+        max-width:60%
+    }
+    textarea{
+        max-width: 60%;
+    }
+}
+
+/*Telas maiores*/
+@media (min-width:1024px){
+    header, section{
+        max-width: 750px;
     }
 }

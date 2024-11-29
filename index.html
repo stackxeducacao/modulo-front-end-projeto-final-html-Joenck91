@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Luis Joenck</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 
     <!--Links das fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,156 +18,167 @@
     <script src="https://kit.fontawesome.com/33c2077600.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header><!--CABEÇALHO DA PÁGINA-->
-        <h1>Luis Joenck</h1>
-        <nav>
+<body class="body-layout">
+    <!-- ************************ HEADER ************************ -->
+    <header class="header"><!--CABEÇALHO DA PÁGINA-->
+        <h1>luisjoenck</h1>
+        <nav class="header__nav">
             <a href="https://github.com/Joenck91" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/luisjoenck/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </nav>
     </header>
 
-    <section class="firstSection"><!--SESSÃO COM HEAD, SUBHEAD E FOTO DE PERFIL-->
-        <div class="divImg">
-            <img src="assets/img/foto de perfil sem fundo.png" alt="foto de perfil" width="200px">
-        </div>
-        <div class="divHeads">
-            <h2>Uma só expectativa:<br> Resultados <span class="greenline">Otimizados!</span></h2>
-            <p>Sou um desenvolvedor apaixonado por desafios que levam a resultados significativos! </p>
-            <a href="https://api.whatsapp.com/send?phone=5547989095566" class="greenline" target="_blank">CONTATO</a>
-        </div>
+    <!-- ************************ CONTEUDO/MAIN ************************ -->
+    <main class="main_content">
+        
+        <!-- ------ SESSÃO COM HEAD, SUBHEAD E FOTO DE PERFIL ------ -->
+        <section class="section_perfil">
+            <div class="perfil_img">
+                <img src="assets/img/foto de perfil sem fundo.png" alt="foto de perfil" width="200px">
+            </div>
+            <div class="perfil_heads">
+                <h2>Uma só expectativa:<br> Resultados <span class="perfil_otimizados">Otimizados!</span></h2>
+                <p>Sou um desenvolvedor apaixonado por desafios que levam a resultados significativos! </p>
+                <a href="https://api.whatsapp.com/send?phone=5547989095566" class="perfil_contact" target="_blank"><code>Contato</code></a>
+            </div>
+        </section>
 
+        
+        <hr>
 
-    </section>
-    <hr>
-    <h2>Projetos</h2>
-    <section class="secondSection"><!--SESSÃO DOS PROJETOS: Cada div aqui representa um projeto com diretório no github -->
-            <div class="projetocrm divsprojetos"><!-- DIV PROJETO CRM-->
+        <!-- ------ SESSÃO DOS PROJETOS ------ -->
+        <section class="section_projects">
+            <h2>PROJETOS</h2>    
+            <div class="section_projects_divs">
+                <!-- PROJETO CRM-->
+                <div class="project_box">
+                    <div><!-- Imagem do projeto-->
+                        <a href="https://github.com/Joenck91/RapinaCRM" target="_blank"><img src="assets/img/crm.png" alt="crm"></a>
+                    </div>
+                    <div class="project_box_title"><!--Titulo e logos html, css, javascript e mysql-->
+                        <div>
+                            <h3>RAPINA CRM</h3>
+                        </div>
+                        <div class="project_box_icon">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                    </div>
+                    <div class="project_text"><!-- Texto explicativo-->
+                        <p>Trabalhando de forma autônoma com vendas, experimentei a necessidade de
+                            ter um melhor controle de leads. Mas não precisava de tantas coisas como um sistema tradicional
+                            oferece. Então criei meu próprio crm pessoal.</p>
+                    </div>
+                </div>
+
+                <!-- PROJETO PAGINA DE VENDAS EBOOK-->
+                <div class="project_box">
+                    <div><!-- Imagem do projeto-->
+                        <a href="https://github.com/Joenck91/ebook-crit-rios-de-forca-no-daytrade" target="_blank"><img src="assets/img/ebook.png" alt="crm"></a>
+                    </div>
+                    <div class="project_box_title"><!--Titulo e logos html, css, javascript e mysql-->
+                        <div>
+                            <h3>PAGINA DE VENDAS EBOOK</h3>
+                        </div>
+                        <div class="project_box_icon">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project_text"><!-- Texto explicativo-->
+                        <p>Uma das fases de um funil de vendas é entregar uma isca fácil e atrativa de morder. E uma pagina web é uma das melhores formas de jogar a isca no mar.</p>
+                    </div>
+                </div>
+
+                <!-- PROJETO PAGINA DE VENDAS DE ROUPAS DE CAMA-->
+                <div class="project_box">
+                    <div><!-- Imagem do projeto-->
+                        <div class="project_load">
+                            <div class="project_load_bar">
+                                <p class="project_load_bar_green">Loanding......</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_box_title"><!--Titulo e logos html, css, javascript e mysql-->
+                        <div>
+                            <h3>PAGINA DE VENDAS ROUPAS DE CAMA</h3>
+                        </div>
+                        <div class="project_box_icon">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-solid fa-server"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                    </div>
+                    <div class="project_text"><!-- Texto explicativo-->
+                        <p>Minha mãe sempre foi uma ótima costureira. Mas parece que a próxima
+                            geração vai acabar dando um upgrade nos negócios da familia.</p>
+                    </div>
+                </div>
+
+                <!-- PROJETO TRANSLADO EXECUTIVO-->
+                <div class="project_box">
+                    <div><!-- Imagem do projeto-->
+                        <div class="project_load">
+                            <div class="project_load_bar">
+                                <p class="project_load_bar_green">Loanding......</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_box_title"><!--Titulo e logos html, css, javascript e mysql-->
+                        <div>
+                            <h3>Reservas de veiculos para translados executivos</h3>
+                        </div>
+                        <div class="project_box_icon">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-solid fa-server"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                    </div>
+                    <div class="project_text"><!-- Texto explicativo-->
+                        <p>Trabalhando na hotelaria percebi uma demanda cada vez maior por translados
+                            executivos. Um processo cheio de erros e retrabalhos por falta de informações claras e de rápido
+                            acesso.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <hr>        
+
+        <!-- ------ SESSÃO FORMULÁRIOS ------ -->
+        <section class="section_form">
             <div>
-                <div class="projetostituloselogos"><!--Colocar logos html, css, javascript e mysql-->
-                    <div>
-                        <p class="projetostitulos">Rapina CRM</p>
-                    </div>
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-solid fa-server"></i>
+                <h2>CONTATO</h2>
+                <p class="form_text">Não deixe de enviar uma mesagem para discutirmos ideias e compartilhar insights.
+                </p>
 
-                </div>
-                <div class="projetostexto">
-                    <p class="projetostextos">Trabalhando de forma autônoma com vendas, experimentei a necessidade de
-                        ter um melhor controle de leads. Mas não precisava de tantas coisas como um sistema tradicional
-                        oferece. Então criei meu próprio crm pessoal.</p>
-                </div>
             </div>
-            <div class="projetosimg">
-                <a href="https://github.com/Joenck91/RapinaCRM" target="_blank"><img src="assets/img/crm.png"
-                        alt="crm"></a>
+            <div class="divform">
+                <form action="#" method="get">
+                    <input class="greenline" type="text" name="nome" id="nome" placeholder="Nome" required><br>
+                    <input class="greenline" type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
+                    <input class="greenline" type="email" name="email" id="email" placeholder="email" required><br>
+                    <textarea class="greenline" name="mensagem" id="mensagem" placeholder="Mensagem"
+                        required></textarea><br>
+                    <input type="submit" value="Enviar" placeholder="Enviar" id="enviar">
+                </form>
             </div>
-        </div>
+        </section>
+    </main>
 
-        <div class="projetoebook divsprojetos"><!-- PROJETO PAGINA DE VENDAS DE EBOOK-->
-            <div>
-                <div class="projetostituloselogos"><!--Colocar logos html, css, javascript e mysql-->
-                    <div>
-                        <p class="projetostitulos">Pagina de vendas de ebook</p>
-                    </div>
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-
-                </div>
-                <div class="projetostexto">
-                    <p class="projetostextos">Uma das fases de um funil de vendas é entregar uma isca fácil e atrativa
-                        de morder. E uma pagina web é uma das melhores formas de jogar a isca no mar.</p>
-                </div>
-            </div>
-            <div class="projetosimg">
-                <a href="https://github.com/Joenck91/ebook-crit-rios-de-forca-no-daytrade" target="_blank"><img
-                        src="assets/img/ebook.png" alt="crm"></a>
-            </div>
-        </div>
-
-        <div class="projetoroupasdecama divsprojetos"><!-- PROJETO PAGINA DE VENDAS DE ROUPAS DE CAMA-->
-            <div>
-                <div class="projetostituloselogos"> <!--Colocar logos html, css, javascript e mysql-->
-                    <div>
-                        <p class="projetostitulos">Pagina de vendas de roupas de cama</p>
-                    </div>
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-solid fa-server"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                </div>
-                <div class="projetostexto">
-                    <p class="projetostextos">Minha mãe sempre foi uma ótima costureira. Mas parece que a próxima
-                        geração vai acabar dando um upgrade nos negócios da familia.</p>
-                </div>
-            </div>
-            <div class="projetosimg">
-                <div class="projetodownload">
-                    <div class="corpobarra">
-                        <p class="barracheia">Loanding......</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="projetotranslado divsprojetos"><!-- PROJETO TRANSLADO EXECUTIVO-->
-            <div>
-                <div class="projetostituloselogos"> <!--Colocar logos html, css, javascript e mysql-->
-                    <div>
-                        <p class="projetostitulos">Reservas de veiculos para translados executivos</p>
-                    </div>
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-solid fa-server"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                </div>
-                <div class="projetostexto">
-                    <p class="projetostextos">Trabalhando na hotelaria percebi uma demanda cada vez maior por translados
-                        executivos. Um processo cheio de erros e retrabalhos por falta de informações claras e de rápido
-                        acesso.</p>
-                </div>
-            </div>
-            <div class="projetosimg">
-                <div class="projetodownload">
-                    <div class="corpobarra">
-                        <p class="barracheia">Loanding......</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <hr>
-    <section class="sessaoformulario"><!--SESSÃO DO FORMULÁRIO-->
-        <div>
-            <h2>Contato</h2>
-            <p class="textoformulario">Não deixe de enviar uma mesagem para discutirmos ideias e compartilhar insights.
-            </p>
-
-        </div>
-        <div class="divform">
-            <form action="#" method="get">
-                <input class="greenline" type="text" name="nome" id="nome" placeholder="Nome" required><br>
-                <input class="greenline" type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
-                <input class="greenline" type="email" name="email" id="email" placeholder="email" required><br>
-                <textarea class="greenline" name="mensagem" id="mensagem" placeholder="Mensagem"
-                    required></textarea><br>
-                <input type="submit" value="Enviar" placeholder="Enviar" id="enviar">
-            </form>
-        </div>
-    </section>
-    <footer><!--RODAPÉ-->
+    <!-- ************************ RODAPÉ ************************ -->
+    <footer class="section_footer"><!--RODAPÉ-->
         <nav>
             <a href="https://github.com/Joenck91" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/luisjoenck/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </nav>
-        <p>LUIS JOENCK</p>
+        <p>luisjoenck</p>
     </footer>
 </body>
 

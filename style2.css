@@ -12,30 +12,41 @@ html{
 }
 body{
     width: 100%;
-    max-width: 924px;
     font-family: 'Volkhov';
     font-weight: 400;
     font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 800px;
 }
-main, header, footer{
-    width: 97%;;
+header{
+    width: 97%;
+    
+    max-width: 800px;
 }
-section{
-    margin: 50px 5px;
+.section_perfil, .section_projects{
+    margin: 20px 25px;
+    max-width: 800px;
+}
+.section_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 h2{
     font-size: 30px;
-    margin: 20px 0;
+    margin: 25px 0;
     width: 100%;
 }
 p{
-    width: 100%;
     margin-bottom: 10px;
 }
 h3{
@@ -69,13 +80,17 @@ h3{
     border-bottom-left-radius: 10px;
     padding: 3px;
 }
+.form_itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* --------------------- LAYOUT --------------------- */
 .body-layout{
     color: #eeeeee;
     text-align: center;
-}
-.body-layout{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,12 +128,12 @@ h3{
 .perfil_img img{
     width: 200px;
     z-index: 1;
-
 }
 .perfil_otimizados{
     border-bottom: 1px solid rgb(0, 255, 0)   ;
 }
 hr{
+    margin-top: 25px;
     border: solid 1px #eeeeee;
     border-top-color: #1e1e1e;
     width: 95%; 
@@ -127,7 +142,28 @@ hr{
     border-radius: 4px;
     width: 100%;
 }
-
+.section_form{   
+    background-color: #2e2e2e;
+    width: 100%;
+}
+.form_box, .form_titles{
+    width: 95%;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: #2e2e2e;
+}
+.last_hr{
+    margin: 50px 0;
+    padding: 0;
+    width: 95%;
+    max-width: 800px;
+}
 /* --------------------- MODULE --------------------- */
 a{
     color: #eeeeee;
@@ -138,7 +174,8 @@ i{
     padding: 3px;
 }
 form{
-    margin: 5px auto;
+    margin: 5px 0;
+    width: 100%;
 }
 input, textarea{
     margin: 3px auto;
@@ -146,25 +183,29 @@ input, textarea{
     font-size: 18px;
     border-radius: 5px;
     padding: 15px;
-    background-color: #1e1e1e;
+    background-color: #2e2e2e;
     border-bottom: solid 2px #eeeeee;
     color: #eeeeee;
 }
 input::placeholder{
     color: #eeeeee;
+    background-color: #2e2e2e;
 }
 textarea::placeholder{
     color: #eeeeee;
+    background-color: #2e2e2e;
 }
 textarea{
     height: 150px;
+    background-color: #2e2e2e;
 }
 #enviar{
     color: #eeeeee;
-    width: 150px;
+    width: 180px;
     position: relative;
     left: 25%;
     border-bottom: 1px solid rgb(0,255,0);
+    
 }
 .perfil_contact{
     padding: 5px;
@@ -174,23 +215,43 @@ textarea{
     width: fit-content;
 }
 
+
 /* --------------------- STATE --------------------- */
 
 /* --------------------- THEME --------------------- */
 
 @media (min-width:767px){
 /* --------------------- BASE --------------------- */
+.section_perfil{
+    max-width: 95%;
+}
 .header__nav{
     margin: 0;
 }
-.section_projects_divs{
+.section_projects{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
 }
-.project_box img{
-    width: 250px;
+.section_projects_divs{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
+.project_box{
+    padding: 0;
+    margin: 0;
+}
+hr{
+    margin-top: 50px;
+}
+.section_form{
+    width: 100%;
+}
+
+
 
 /* --------------------- LAYOUT --------------------- */
 .header{
@@ -201,46 +262,70 @@ textarea{
 }
 .section_perfil{
     position: relative;
-    width: 100%;
+    width: 95%;
     height: 390px;
     display: flex;
     flex-direction: row;
     justify-content:left;
-    align-items: end;
+    align-items: start;
 }
 .perfil_img{
-    width: 350px;
-    height: 550px;
+    width: 320px;
+    height: 520px;
     position: absolute;
     right: 0;
     top: 0;
-    margin-top: -150px;
+    margin-top: -100px;
     margin-right: -20px;
     border:none;
 }
 .perfil_img img{
     width: 100%;
-    width: 350px;
+    width: 320px;
     margin-top: 400px;
 }
-.perfil_heads{
+.perfil_titles{
     width: fit-content;
     display: flex;
     flex-direction: column;
     text-align: left;
 }
-.perfil_heads h2{
+.perfil_titles h2{
+    margin-top: 70px;
     font-size: 42px;
-    padding: 10px 0;
 }
-.perfil_heads p{
-    font-size: 26px;
-    width: 480px;
-    padding: 10px 0;
+.perfil_titles p{
+    font-size: 24px;
+    width: 445px;
+    margin-top: 25px;
 }
-hr{
-    margin-top: 80px;
+.perfil_contact{
+    margin-top: 25px;
 }
+.project_box img{
+    min-width: 300px;
+}
+.form_titles, .form_box{
+    width: 60%;
+}
+.footer_itens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 730px;
+}
+.footer_itens nav{
+    order:  1;
+    width: 100px;
+    display: flex;
+
+    justify-content: space-around;
+}
+.footer_itens{
+    font-size: 1.5em;
+}
+
+
 
 
 
@@ -251,14 +336,74 @@ hr{
 /* --------------------- THEME --------------------- */
 }
 
+@media (min-width:1023px){
+/* --------------------- BASE --------------------- */
+header, main, footer{
+    min-width: 850px;
+}
+.perfil_img {
+    margin-right: 0;
+}
+.perfil_titles h2{
+    font-size: 44px;
+}
+form{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+/* --------------------- LAYOUT --------------------- */
+.section_projects{
+    min-width: 100%;
+}
+.form_itens{
+    padding-top: 50px;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    width: 850px;
+}
+.form_itens h2{
+    font-size: 48px;
+}
+.form_titles{
+    padding-right: 30px;
+}
+.form_box{
+    padding-left: 30px;
+}
+.last_hr{
+    width: 800px;
+}
+
+/* --------------------- MODULE --------------------- */
+
+/* --------------------- STATE --------------------- */
+
+/* --------------------- THEME --------------------- */
+}
 
 
-/* BASE */
 
-/* LAYOUT */
 
-/* MODULE */
 
-/* STATE */
 
-/* THEME */
+
+
+
+
+
+
+
+/* --------------------- BASE --------------------- */
+
+/* --------------------- LAYOUT --------------------- */
+
+/* --------------------- MODULE --------------------- */
+
+/* --------------------- STATE --------------------- */
+
+/* --------------------- THEME --------------------- */

@@ -1,343 +1,347 @@
+/* --------------------- BASE --------------------- */
 *{
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    text-align: center;
 }
-html{
+html, body{
     width: 100%;
-    margin: 0;
-    padding: 0;
-}
-body{
-    color: #eeeeee;
-    width: 100%;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:#1e1e1e;
     font-family: 'Volkhov';
     font-weight: 400;
     font-style: normal;
-    font-size: 1em;
 }
-header{
+main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 100%;
 }
-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 50%;
+header{
+    width: 97%;
+    max-width: 800px;
+    background: transparent;
 }
 section{
     width: 95%;
-    padding-bottom: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 hr{
-    border: solid 1px #6161615b;
-    width:60%;
-    margin: 20px;
-    
-}
-a{
-    color: #eeeeee;
-    z-index: 2;
-    text-decoration: none;
-}
-.greenline{
-    border-bottom: solid 3px green;
-    padding-bottom: 8px;
-}
-
-/*Estilos mais especificos*/
-i{
-    font-size: 30px;
-}
-h1{
-    padding: 8px;
+    margin: 5px 0;
+    border: solid 1px #eeeeee;
+    width: 85%; 
 }
 h2{
-    padding: 10px;
-    font-size: 32px;
+    font-size: 28px;
+    width: 100%;
+    margin: 20px 0;
 }
-nav{
-    display: flex;
-    width: 50%;
-    justify-content:space-around;
-    align-items: center;
-    padding: 3px;
+p{
+    margin-bottom: 25px;
 }
-.firstSection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 25px;
-  
+img{
+    border-radius: 4px;
 }
-.divImg{
-    overflow: hidden;
-    border-bottom-left-radius: 45%;
-    border-bottom: solid 3px green;
-    margin-top: -55px;
-    width: fit-content;
-    z-index: 1;
-    display: flex;
-    height: 280px;
-    align-items: end;
-    margin-bottom: 40px;
-    background:linear-gradient(to top, #6161615b, #1e1e1e);
-}
-.divImg img{
-    border-bottom-left-radius: 40%;
-}
-.divHeads h2{
-    padding-bottom: 10px;
-}
-.divHeads p{
-    padding: 20px 0;
-}
-.divHeads a{
-    font-size: 18px;
-}
-
-/*Proximos 3 elementos são padrões para a criação de mais projetos*/
-
-.projetostitulos{
+h3{
     font-size: 24px;
-    display: inline;
-    flex-direction: column;
 }
-.projetostextos{
-    padding: 10px 0;
-}
-.projetosimg img{
-    width: 75%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-/*Decoração lateral de cada projeto*/
-.projetocrm{
-    padding: 10px;
-    border-left: solid 2px green;
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
-}
-.projetoebook{
-    padding: 10px;
-    border-right: solid 2px green;
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10% ;
-    margin-top: 30px;
-}
-.projetoroupasdecama{
-    padding: 10px;
-    border-left: solid 2px green;
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
-    margin-top: 30px;
-}
-.projetotranslado{
-    padding: 10px;
-    border-right: solid 2px green;
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10% ;
-    margin-top: 30px;
-}
-
-/*PóXimos 3 elementos são padrões para projetos em andamento*/
-.projetodownload{
+footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
-.corpobarra{
+
+/* --------------------- LAYOUT --------------------- */
+.l-body{/*Estiliza o body*/
+    background-color: #1e1e1e;
+    color: #eeeeee;
+    text-align: center;
     display: flex;
-    align-items: start;
-    width: 250px;
-    background-color: #6161615b;
-    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
 }
-.barracheia{
-    padding: 5px 15px;
+.l-header{/*estiliza o cabeçalho*/
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.l-header nav{/*Estiliza os botões do cabeçalho*/
+    padding: 10px;
+    margin: auto;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+.box-img {/*Box em que fica a imagem do perfil*/
+    width: fit-content;
+    height: 280px;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(to top, #eeeeee1c, #1e1e1e);
+    border-bottom:solid 6px rgb(0,255,0);
+    border-left: solid 1px rgb(0,255,0);
+    margin-top: -65px;
+    z-index:-1;
+}
+.box-img img{/*Imagem do perfil*/
+    height: auto;
+    z-index: 1;
+    
+}
+.a-contact{/*Define o design do botão coontato que está abaixo da subhead na primeira seção. */
+    padding: 5px;
+    font-size: 28px;
+    text-decoration: none;
+    width: fit-content;
+}
+.projectStyle img{/*Deixa a imagem de cada projeto mais longe do parágrafo do projeto anterior*/
+    width: 100%;
+}
+.box-load-bar{/*div para a barra de load dos projetos em andamento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+.load-bar{/*Barra de load dos projetos em andamento*/
+    background-color: #eeeeee;
+    border-radius: 10px;
+    width: 180px;
+    height: 100%;
+}
+.load-bar-green{/*Espaço verde da barra de load dos projetos em andamento*/
     background-color: green;
+    width: 120px;
+    height: 100%;
+    margin-bottom: 0;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    color: #1e1e1e;
+    padding: 3px;
+}
+.formStyle{/*Define o design do formulário de contato*/
+    background-color: #2e2e2e;
+    width: 100%;
+}
+.formStyle div{/*Deixa o formulário ais centralizado*/
+    width: 95%;
+}
+.l-footer{/*Rodapé da página*/
+    background-color: #2e2e2e;
+    padding: 20px 0;
 }
 
-/*Formulário*/
-.sessaoformulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* --------------------- MODULE --------------------- */
+button{/*botão*/
+    background-color:#1e1e1e;
+    margin: 15px 0;
 }
-.divform{
-    width: 95%;
-    display: flex;
-    justify-content: center;
-}.textoformulario{
-    text-align: center;
+a{/*Armazena o link do botão.*/
+    color: #eeeeee;
+    font-size: 1.5em;
 }
-form{
-    width: 85%;
-    padding: 25px;
+.greenLine{/*Deixa a palavra sublinhada de verde.*/
+    border-bottom: 1px solid rgb(0, 255, 0);
 }
-input{
-    color: aliceblue;
-    border-bottom: 10px;
-    background:none;
+i{/*Deixa o ícone dos favicons mais bonitos.*/
+    font-size: 26px;
+    padding: 3px;
+}
+form{/*Estiliza o formulário de contato*/
+    margin: 5px 0;
     width: 100%;
-    min-height: 25px;
-    margin: 3px 0;
+}
+input, textarea{/*Layout dos campos de textos do formulario*/
+    margin: 3px auto;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #2e2e2e;
+    border-bottom: solid 2px #eeeeee;
+    color: #eeeeee;
+}
+input::placeholder{
+    color: #eeeeee;
+    background-color: #2e2e2e;
+}
+textarea::placeholder{
+    color: #eeeeee;
+    background-color: #2e2e2e;
 }
 textarea{
-    color: aliceblue;
-    border-bottom: 10px;
-    background:none;
-    width: 100%;
-    min-height: 50px;;
-    margin: 3px 0;
+    height: 150px;
+    background-color: #2e2e2e;
 }
-#enviar{
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 60px;
-    cursor: pointer;
-    margin-top: 20px;
-    background-color: green;
-    color: #1e1e1e;
+form .enviar{
+    color: #eeeeee;
+    width: 180px;
+    position: relative;
+    left: 25%;
+    border-bottom: 1px solid rgb(0,255,0);
+    
 }
 
-/*Footer*/
-footer{
-    padding-bottom: 20px;
+@media (min-width:767px){
+/* --------------------- BASE --------------------- */
+nav{/***********************/
+    margin: 0;
+}
+section{
+    max-width: 95%;
+}
+
+.section_projects{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    text-align: center;
+    width: 95%;
 }
-footer nav{
+.section_projects_divs{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.project_box{
+    padding: 0;
+    margin: 0;
+}
+hr{
+    margin-top: 50px;
+}
+.section_form{
+    width: 100%;
+}
+
+
+
+/* --------------------- LAYOUT --------------------- */
+.l-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.section_perfil{
+    position: relative;
+    width: 95%;
+    height: 390px;
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: start;
+}
+.perfil_img{
+    width: 320px;
+    height: 520px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: -100px;
+    margin-right: -20px;
+    border:none;
+}
+.perfil_img img{
+    width: 100%;
+    width: 320px;
+    margin-top: 400px;
+}
+.perfil_titles{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.perfil_titles h2{
+    margin-top: 70px;
+    font-size: 42px;
+}
+.perfil_titles p{
+    font-size: 24px;
+    width: 445px;
+    margin-top: 25px;
+}
+.perfil_contact{
+    margin-top: 25px;
+}
+.project_box img{
+    min-width: 300px;
+}
+.form_titles, .form_box{
+    width: 60%;
+}
+.footer_itens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 730px;
+}
+.footer_itens nav{
+    order:  1;
     width: 100px;
+    display: flex;
+
     justify-content: space-around;
-    padding: 10px;
+}
+.footer_itens{
+    font-size: 1.5em;
+}
 }
 
-/*Tablets*/
-@media (min-width: 768px){
-    header{
-        flex-direction: row;
-        width: 98%;
-        justify-content: space-around;
-        text-align: left;
-        font-size: 12px;
-    }
-    header, section{
-        max-width: 750px;
-    }
-    .fa-brands{
-        font-size: 20px;
-    }
-    nav{
-        width: 20%;
-        display: inline-flex;
-        justify-content: space-evenly;
-        display: inline-flex;
-    }
-    .firstSection{
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 0;
-    }
-    .divHeads{
-        margin: 0;
-        order: 1;
-        width: 55%;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    .divImg{
-        margin: 0;
-        order: 2;
-        margin: 0;
-        padding-top: 25px;
-    }
-    .divImg img{
-        width: 230px;
-    }
-    .divHeads h2{
-        text-align: left;
-        padding: 0;
-    }
-    p{
-        text-align: left;
-    }
-    section{
-        width: 95%;
-    }
-    hr{
-        margin: 25px 0;
-    }
-    .secondSection{
-        padding: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap:10px;
-    }
-    .divsprojetos{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .projetocrm{
-        padding: 10px;
-        border-left: 0;
-        border-right: solid 2px green;
-        border-bottom: solid 2px green;
-        border-bottom-left-radius: 10%;
-        border-top-right-radius: 10%;
-    }
-    .projetoebook{
-        border-right: 0;
-        margin-top: 0;
-    }
-    .projetoroupasdecama{
-        border-left: 0;
-        border-top-left-radius: 10%;
-        border-bottom-left-radius: 10%;
-        margin-top: 0;
-    }
-    .projetotranslado{
-        border-right: 0;
-        border-top: solid 2px green;
-        border-top-right-radius: 10%;
-        border-left: solid 2px green;
-        border-bottom-left-radius: 10% ;
-        margin-top: 0;
-    }
-    input{
-        max-width:60%
-    }
-    textarea{
-        max-width: 60%;
-    }
+@media (min-width:1023px){
+/* --------------------- BASE --------------------- */
+header, main, footer{
+    min-width: 850px;
+}
+.perfil_img {
+    margin-right: 0;
+}
+.perfil_titles h2{
+    font-size: 44px;
+}
+form{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
-/*Telas maiores*/
-@media (min-width:1024px){
-    header, section{
-        max-width: 75   0px;
-    }
+/* --------------------- LAYOUT --------------------- */
+.section_projects{
+    min-width: 100%;
 }
+.form_itens{
+    padding-top: 50px;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    width: 850px;
+}
+.form_itens h2{
+    font-size: 48px;
+}
+.form_titles{
+    padding-right: 30px;
+}
+.form_box{
+    padding-left: 30px;
+}
+.last_hr{
+    width: 800px;
+}
+}
+
+
+
+
+
+
+
+
+

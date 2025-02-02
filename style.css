@@ -1,8 +1,9 @@
 /* --------------------- BASE --------------------- */
+
 *{
     margin: 0;
     border: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 html, body{
     width: 100%;
@@ -17,35 +18,40 @@ main{
     width: 100%;
 }
 header{
-    width: 97%;
+    width: 95%;
     max-width: 800px;
     background: transparent;
 }
 section{
     width: 95%;
-    padding: 20px;
+    padding: 0 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 hr{
-    margin: 5px 0;
+    margin: 20px 0;
     border: solid 1px #eeeeee;
-    width: 85%; 
+    border-top: none;
+    width: 95%; 
+    padding: 0;
 }
 h2{
-    font-size: 28px;
     width: 100%;
-    margin: 20px 0;
+    margin: 15px 0;
+    font-size: 24px;
+}
+h3{
+    font-size: 18px;
+}
+code{
+    font-size: 24px;
 }
 p{
-    margin-bottom: 25px;
+    margin: 5px 0;
 }
 img{
     border-radius: 4px;
-}
-h3{
-    font-size: 24px;
 }
 footer{
     display: flex;
@@ -54,6 +60,7 @@ footer{
     align-items: center;
     width: 100%;
 }
+
 
 /* --------------------- LAYOUT --------------------- */
 .l-body{/*Estiliza o body*/
@@ -67,7 +74,15 @@ footer{
 .l-header{/*estiliza o cabeçalho*/
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    z-index: 10;
+}
+.l-header h1{/*Estiliza o titulo do cabeçalho*/
+    display: flex;
+    align-items: center;
+    font-size: 28px;
 }
 .l-header nav{/*Estiliza os botões do cabeçalho*/
     padding: 10px;
@@ -77,21 +92,29 @@ footer{
     flex-direction: row;
     justify-content:space-evenly;
 }
+.l-section{
+    width: 95%;
+    padding: 0;
+}
+.l-project{
+    padding: 15px 0;
+}
 .box-img {/*Box em que fica a imagem do perfil*/
     width: fit-content;
-    height: 280px;
+    height: 350px;
     display: flex;
     align-items: end;
     background: linear-gradient(to top, #eeeeee1c, #1e1e1e);
-    border-bottom:solid 6px rgb(0,255,0);
-    border-left: solid 1px rgb(0,255,0);
-    margin-top: -65px;
-    z-index:-1;
+    /*border-bottom:solid 6px rgb(0,255,0);
+    border-left: solid 1px rgb(0,255,0);*/
+    margin-top: -95px;
 }
-.box-img img{/*Imagem do perfil*/
-    height: auto;
-    z-index: 1;
-    
+.perfil_titles{
+    order: 2;
+}
+.perfil_titles h2{/*Titulo da primeira seção*/
+    font-size: 30px;
+    margin-top: 35px;
 }
 .a-contact{/*Define o design do botão coontato que está abaixo da subhead na primeira seção. */
     padding: 5px;
@@ -99,7 +122,7 @@ footer{
     text-decoration: none;
     width: fit-content;
 }
-.projectStyle img{/*Deixa a imagem de cada projeto mais longe do parágrafo do projeto anterior*/
+.project-section img{/*Deixa a imagem de cada projeto mais longe do parágrafo do projeto anterior*/
     width: 100%;
 }
 .box-load-bar{/*div para a barra de load dos projetos em andamento*/
@@ -112,37 +135,36 @@ footer{
     background-color: #eeeeee;
     border-radius: 10px;
     width: 180px;
-    height: 100%;
 }
 .load-bar-green{/*Espaço verde da barra de load dos projetos em andamento*/
     background-color: green;
     width: 120px;
     height: 100%;
-    margin-bottom: 0;
+    margin: 0;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 3px;
 }
-.formStyle{/*Define o design do formulário de contato*/
+.form-section{/*Define o design do formulário de contato*/
     background-color: #2e2e2e;
     width: 100%;
 }
-.formStyle div{/*Deixa o formulário ais centralizado*/
+.form-section div{/*Deixa o formulário ais centralizado*/
     width: 95%;
 }
 .l-footer{/*Rodapé da página*/
     background-color: #2e2e2e;
     padding: 20px 0;
 }
-
 /* --------------------- MODULE --------------------- */
 button{/*botão*/
     background-color:#1e1e1e;
-    margin: 15px 0;
+    margin: 15px;
+    outline: dashed 1px rgb(0, 255, 0);
+    justify-content: center;
 }
 a{/*Armazena o link do botão.*/
     color: #eeeeee;
-    font-size: 1.5em;
 }
 .greenLine{/*Deixa a palavra sublinhada de verde.*/
     border-bottom: 1px solid rgb(0, 255, 0);
@@ -153,7 +175,7 @@ i{/*Deixa o ícone dos favicons mais bonitos.*/
 }
 form{/*Estiliza o formulário de contato*/
     margin: 5px 0;
-    width: 100%;
+    width: 95%;
 }
 input, textarea{/*Layout dos campos de textos do formulario*/
     margin: 3px auto;
@@ -185,156 +207,188 @@ form .enviar{
     border-bottom: 1px solid rgb(0,255,0);
     
 }
-
 @media (min-width:767px){
-/* --------------------- BASE --------------------- */
-nav{/***********************/
-    margin: 0;
-}
-section{
-    max-width: 95%;
-}
+    /* --------------------- BASE --------------------- */
+    header{
+        width: 90%;
+    }
+    main{
+        max-width: 90%;
+    }
+    button{
+        width: fit-content;
+    }
+    hr{
+        margin: 50px 0;
+        width: 100%;
+    }
+    /* --------------------- LAYOUT --------------------- */
+    .l-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .l-header nav{
+        margin: 0;
+    }
+    .l-section{
+        width: 100%;
+    }
+    .first-section{/*Primeira seção onde tem titulo, subtitulo e imagem de perfil*/
+        flex-direction: row;
+        position: relative;
+    }
+    .perfil_titles{/*Div que contem o titulo, subtitulo e botão de contato*/
+        text-align: left;
+        order: initial;
+        position: relative;
+        z-index: 2;
+    }
+    .perfil_titles h2{/*Estiliza o titulo da primeira seção.*/
+        margin-top: 80px;
+        font-size: 38px;
+    }
+    .perfil_titles p{/*Estiliza o paragrafo abaixo do titulo da pagina*/
+        font-size: 24px;
+        width: 445px;
+        margin:50px 0 60px 0;
+    }
+    .box-img{/* Refere á div que armazena o elemento img com a imagem do perfil*/
+        height: 500px;
+        right: 0;
+        top: 0;
+        margin-top: -80px;
+        border:none;
+        position: absolute;
+        z-index: 1;
 
-.section_projects{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-}
-.section_projects_divs{
-    width: 95%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-.project_box{
-    padding: 0;
-    margin: 0;
-}
-hr{
-    margin-top: 50px;
-}
-.section_form{
-    width: 100%;
-}
-
-
-
-/* --------------------- LAYOUT --------------------- */
-.l-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-.section_perfil{
-    position: relative;
-    width: 95%;
-    height: 390px;
-    display: flex;
-    flex-direction: row;
-    justify-content:left;
-    align-items: start;
-}
-.perfil_img{
-    width: 320px;
-    height: 520px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: -100px;
-    margin-right: -20px;
-    border:none;
-}
-.perfil_img img{
-    width: 100%;
-    width: 320px;
-    margin-top: 400px;
-}
-.perfil_titles{
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-.perfil_titles h2{
-    margin-top: 70px;
-    font-size: 42px;
-}
-.perfil_titles p{
-    font-size: 24px;
-    width: 445px;
-    margin-top: 25px;
-}
-.perfil_contact{
-    margin-top: 25px;
-}
-.project_box img{
-    min-width: 300px;
-}
-.form_titles, .form_box{
-    width: 60%;
-}
-.footer_itens{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 730px;
-}
-.footer_itens nav{
-    order:  1;
-    width: 100px;
-    display: flex;
-
-    justify-content: space-around;
-}
-.footer_itens{
-    font-size: 1.5em;
-}
+    }
+    .box-img img{/*Altera largura da imagem*/
+        width: 320px;
+    }
+    .project-section{/*Sessão que armazena os projetos*/
+        padding: 0;
+        justify-content: space-around;
+    }
+    .project-section h2{/*Titulo da sessão de projetos*/
+        margin: 0 0 20px 0;
+    }
+    .h2-size{
+        font-size: 32px;
+    }
+    .box-projects{/*Div que armazena os projetos*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .l-project{/*Defini tamanho máximo de largura para cada projeto */
+        max-width: 48%;
+    }
+    .form-section{/*Sessão que contém o formulário de contato*/
+        width: 100vw;
+    }
+    .form-divs{/*Defini largura para as divs que estãoi dentro da sessão do formulário*/
+        max-width: 65%;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .l-footer div{
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .l-footer p {
+        margin: 0;
+        padding: 10px;
+        font-size: 28px;
+    }
+    .l-footer nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 10px;
+    }
+    /* --------------------- MODULE --------------------- */
+    button{
+        margin: 0;
+    }
+     button code{
+        font-size: 34px;
+    }
+    .l-footer hr{
+        margin: 50px 0 20px 0;
+        max-width: 95%;
+    }
 }
 
 @media (min-width:1023px){
-/* --------------------- BASE --------------------- */
-header, main, footer{
-    min-width: 850px;
-}
-.perfil_img {
-    margin-right: 0;
-}
-.perfil_titles h2{
-    font-size: 44px;
-}
-form{
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-}
-
-/* --------------------- LAYOUT --------------------- */
-.section_projects{
-    min-width: 100%;
-}
-.form_itens{
-    padding-top: 50px;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    text-align: start;
-    width: 850px;
-}
-.form_itens h2{
-    font-size: 48px;
-}
-.form_titles{
-    padding-right: 30px;
-}
-.form_box{
-    padding-left: 30px;
-}
-.last_hr{
-    width: 800px;
-}
+    /* --------------------- BASE --------------------- */
+    header, main{
+        max-width: 800px;
+    }
+    hr{
+        width: 100%;
+    }
+    h1{
+        font-size: 26px;
+    }
+    form{
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+    /* --------------------- LAYOUT --------------------- */
+    .first-section{
+        display: flex;
+    }
+    .box-img{
+        position: absolute;
+        height: 530px;
+    }
+    .perfil_titles{
+        height: 450px;
+    }
+    .perfil_titles h2{ 
+        font-size: 46px;
+        position: relative;
+        z-index: 2; 
+    }
+    .form-section{
+        width: 100vw;
+        display: flex;
+        flex-direction: row; 
+        align-items: start;
+        justify-content: center;
+    }
+    .form-divs{
+        max-width: 390px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form_titles{
+        padding-right: 30px;
+    }
+    .l-footer div{
+        max-width: 800px;
+        margin-bottom: 30px;
+    }
+    .l-footer hr{
+        margin: 50px 0 20px 0;
+        max-width: 800px;
+    }
 }
 
 

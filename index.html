@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Luis Joenck</title>
     <link rel="stylesheet" href="style.css">
-
     <!--Links das fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <!-- Links dos icones.-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,7 +18,7 @@
 <body class="l-body">
     <!-- ************************ HEADER ************************ -->
     <header class="l-header"><!--CABEÇALHO DA PÁGINA-->
-        <h1>luisjoenck</h1>
+        <h1>luisJoenck</h1>
         <nav>
             <a href="https://github.com/Joenck91" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/luisjoenck/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -32,26 +29,26 @@
     <main class="l-main">
         
         <!-- ------ SESSÃO COM HEAD, SUBHEAD E FOTO DE PERFIL ------ -->
-        <section class="l-section">
-            <div class="box-img">
-                <img src="assets/img/foto de perfil sem fundo.png" alt="foto de perfil" width="200px">
-            </div>
+        <section class="l-section first-section">
             <div class="perfil_titles">
                 <h2>Uma só expectativa:<br> Resultados <span class="greenLine">Otimizados!</span></h2>
                 <p>Sou um desenvolvedor apaixonado por desafios que levam a resultados significativos! </p>
                 <button>
-                    <a href="https://api.whatsapp.com/send?phone=5547989095566" class="a-contact greenLine" target="_blank"><code>Contato</code></a>
+                    <a href="https://api.whatsapp.com/send?phone=5547989095566" class="a-contact " target="_blank"><code>Contato</code></a>
                 </button>
                 
+            </div>
+            <div class="box-img">
+                <img src="assets/img/foto de perfil sem fundo.png" alt="foto de perfil" width="200px">
             </div>
         </section>
         <hr>
         <!-- ------ SESSÃO DOS PROJETOS ------ -->
-        <section class="l-section projectStyle">
-            <h2>PROJETOS</h2>    
-            <div>
+        <section class="l-section project-section">
+            <h2 class="h2-size">PROJETOS</h2>    
+            <div class="box-projects">
                 <!-- PROJETO CRM-->
-                <div>
+                <div class="l-project">
                     <div><!-- Imagem do projeto-->
                         <a href="https://github.com/Joenck91/RapinaCRM" target="_blank"><img src="assets/img/crm.png" alt="crm"></a>
                     </div>
@@ -74,7 +71,7 @@
                 </div>
 
                 <!-- PROJETO PAGINA DE VENDAS EBOOK-->
-                <div>
+                <div  class="l-project">
                     <div><!-- Imagem do projeto-->
                         <a href="https://github.com/Joenck91/ebook-crit-rios-de-forca-no-daytrade" target="_blank"><img src="assets/img/ebook.png" alt="crm"></a>
                     </div>
@@ -93,7 +90,7 @@
                 </div>
 
                 <!-- PROJETO PAGINA DE VENDAS DE ROUPAS DE CAMA-->
-                <div>
+                <div  class="l-project">
                     <div><!-- Imagem do projeto-->
                         <div class="box-load-bar">
                             <div class="load-bar">
@@ -120,7 +117,7 @@
                 </div>
 
                 <!-- PROJETO TRANSLADO EXECUTIVO-->
-                <div>
+                <div  class="l-project">
                     <div><!-- Imagem do projeto-->
                         <div class="box-load-bar">
                             <div class="load-bar">
@@ -150,15 +147,15 @@
 
         </section>
         <!-- ------ SESSÃO FORMULÁRIOS ------ -->
-        <section class="l-section formStyle">
+        <section class="l-section form-section">
         
-            <div>
-                <h2>CONTATO</h2>
+            <div class="form-divs">
+                <h2 class="h2-size">CONTATO</h2>
                 <p class="form_text">Não deixe de enviar uma mesagem para discutirmos ideias e compartilhar insights.
                 </p>
     
             </div>
-            <div>
+            <div class="form-divs">
                 <form action="#" method="get">
                     <input class="greenline" type="text" name="nome" id="nome" placeholder="Nome" required><br>
                     <input class="greenline" type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
@@ -170,15 +167,18 @@
             </div>
         
         </section>  
+        
     </main>
+    
     <!-- ************************ RODAPÉ ************************ -->
     <footer class="l-footer"><!--RODAPÉ-->
+        <hr>
         <div>
+            <p>luisJoenck</p>
             <nav>
                 <a href="https://github.com/Joenck91" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/luisjoenck/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </nav>
-            <p>luisjoenck</p>
         </div>
 
     </footer>
